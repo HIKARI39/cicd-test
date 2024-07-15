@@ -7,6 +7,12 @@ on:
                 default: Hello #デフォルト値
                 required: true #必須フラグ
                 description: A Cheerful word #パラメータの説明
+            log-level:
+                type: choice #入力を制限
+                options: #入力値の列挙
+                    - info
+                    - warn
+                    - error
 jobs:
     run:
         runs-on: ubuntu-latest
